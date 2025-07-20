@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東京旅行プラン【当日用作戦要綱】</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #ECEFF1; /* Blue Grey 50 */
+            color: #263238; /* Blue Grey 900 */
+        }
+        .task-card {
+            background-color: white;
+            border-left: 5px solid #78909C; /* Blue Grey 400 */
+            transition: all 0.3s ease;
+        }
+        .task-card.checked {
+            background-color: #F1F8E9; /* Light Green 50 */
+            border-left-color: #4CAF50; /* Green 500 */
+        }
+        .task-card.checked .task-text {
+            text-decoration: line-through;
+            color: #757575; /* Grey 600 */
+        }
+        .accordion-button {
+            background-color: #546E7A; /* Blue Grey 600 */
+            color: white;
+        }
+        .accordion-button svg {
+            transition: transform 0.3s ease;
+            color: white;
+        }
+        .accordion-button.open svg {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            background-color: #CFD8DC; /* Blue Grey 100 */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto max-w-2xl p-4 sm:p-6">
+        <header class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-gray-800">東京旅行プラン</h1>
+            <p class="text-gray-600 mt-1">当日用インタラクティブ作戦要綱</p>
+        </header>
+
+        <div id="trip-accordion" class="space-y-4">
+            <!-- Phase 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full flex justify-between items-center p-4 text-left font-bold text-lg open" data-target="phase1-content">
+                    <span>フェーズ1：拠点確保と周辺領域の制圧</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="phase1-content" class="accordion-content p-4 space-y-3">
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【15:28】東京駅に着弾</p>
+                        </div>
+                    </div>
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【16:00】<a href="https://www.google.com/maps/search/?api=1&query=OMO3浅草" target="_blank" class="text-blue-700 hover:underline">OMO3浅草</a>にチェックイン</p>
+                            <p class="text-sm text-gray-600">基地設営</p>
+                        </div>
+                    </div>
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【16:30〜】浅草寺・仲見世通りを偵察</p>
+                            <p class="text-sm text-gray-600"><a href="https://www.google.com/maps/search/?api=1&query=フラワーミッフィー+浅草" target="_blank" class="text-blue-700 hover:underline">フラワーミッフィー</a>を確保</p>
+                        </div>
+                    </div>
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【18:00〜】<a href="https://www.google.com/maps/search/?api=1&query=東京スカイツリータウン" target="_blank" class="text-blue-700 hover:underline">東京スカイツリータウン</a>へ進出</p>
+                            <p class="text-sm text-gray-600">すみだ水族館を調査、miffy styleを訪問</p>
+                        </div>
+                    </div>
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【夜】補給（ディナー）</p>
+                            <p class="text-sm text-gray-600">浅草または押上エリアにて</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full flex justify-between items-center p-4 text-left font-bold text-lg" data-target="phase2-content">
+                    <span>フェーズ2：最重要任務と東西横断</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="phase2-content" class="accordion-content p-4 space-y-3 hidden">
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【11:00-12:00】<a href="https://www.google.com/maps/search/?api=1&query=東京都台東区三筋1-6-2" target="_blank" class="text-blue-700 hover:underline">ink-stand by kakimori</a></p>
+                            <p class="text-sm text-gray-600">最優先ミッションを遂行</p>
+                        </div>
+                    </div>
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【12:30-14:30】<a href="https://www.google.com/maps/search/?api=1&query=秋葉原" target="_blank" class="text-blue-700 hover:underline">秋葉原・神田エリア</a>へ転進</p>
+                            <p class="text-sm text-gray-600">ホビーショップ群を連続攻略</p>
+                        </div>
+                    </div>
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【15:00-16:30】<a href="https://www.google.com/maps/search/?api=1&query=銀座伊東屋" target="_blank" class="text-blue-700 hover:underline">銀座 伊東屋</a>を探訪</p>
+                        </div>
+                    </div>
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【17:15-20:00】<a href="https://www.google.com/maps/search/?api=1&query=トラベラーズファクトリー中目黒" target="_blank" class="text-blue-700 hover:underline">トラベラーズファクトリー</a>を確保</p>
+                            <p class="text-sm text-gray-600">閉店20:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full flex justify-between items-center p-4 text-left font-bold text-lg" data-target="phase3-content">
+                    <span>フェーズ3：最終目標の達成と撤収</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="phase3-content" class="accordion-content p-4 space-y-3 hidden">
+                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【午前】基地撤収＆装備移管</p>
+                            <p class="text-sm text-gray-600">チェックアウト後、荷物を新宿駅の兵站拠点へ</p>
+                        </div>
+                    </div>
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【午前】<a href="https://www.google.com/maps/search/?api=1&query=東京大神宮" target="_blank" class="text-blue-700 hover:underline">東京大神宮</a>を参拝</p>
+                        </div>
+                    </div>
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【昼〜午後】<a href="https://www.google.com/maps/search/?api=1&query=豪徳寺" target="_blank" class="text-blue-700 hover:underline">豪徳寺</a>へ移動</p>
+                            <p class="text-sm text-gray-600">最終目標「<a href="https://www.google.com/maps/search/?api=1&query=ありさ＆あかメガネ" target="_blank" class="text-blue-700 hover:underline">ありさ＆あかメガネ</a>」を訪問</p>
+                        </div>
+                    </div>
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【18:12】東京駅より帰還</p>
+                            <p class="text-sm text-gray-600">作戦完了</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordion = document.getElementById('trip-accordion');
+
+            if (accordion) {
+                accordion.addEventListener('click', (event) => {
+                    const button = event.target.closest('.accordion-button');
+                    if (!button) return;
+
+                    const content = document.getElementById(button.dataset.target);
+                    if (!content) return;
+
+                    const allContents = accordion.querySelectorAll('.accordion-content');
+                    const allButtons = accordion.querySelectorAll('.accordion-button');
+
+                    const isOpening = content.classList.contains('hidden');
+
+                    allContents.forEach(item => {
+                        if (item !== content) {
+                            item.classList.add('hidden');
+                        }
+                    });
+                    allButtons.forEach(item => {
+                       if (item !== button) {
+                           item.classList.remove('open');
+                       }
+                    });
+                    
+                    if (isOpening) {
+                        content.classList.remove('hidden');
+                        button.classList.add('open');
+                    } else {
+                        content.classList.add('hidden');
+                        button.classList.remove('open');
+                    }
+                });
+            }
+
+            const checkboxes = document.querySelectorAll('.task-card input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', (event) => {
+                    const card = event.target.closest('.task-card');
+                    if (card) {
+                        card.classList.toggle('checked', event.target.checked);
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
