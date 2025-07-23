@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>東京旅行プラン【当日用作戦要綱】</title>
+    <title>東京旅行プラン【最終確定版】</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,8 @@
             background-color: #F1F8E9; /* Light Green 50 */
             border-left-color: #4CAF50; /* Green 500 */
         }
-        .task-card.checked .task-text {
+        .task-card.checked .task-text,
+        .task-card.checked .sub-goal-link {
             text-decoration: line-through;
             color: #757575; /* Grey 600 */
         }
@@ -41,6 +42,11 @@
         .accordion-content {
             background-color: #CFD8DC; /* Blue Grey 100 */
         }
+        .sub-goal-container {
+            border-top: 1px dashed #90A4AE; /* Blue Grey 300 */
+            margin-top: 12px;
+            padding-top: 12px;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -48,17 +54,17 @@
     <div class="container mx-auto max-w-2xl p-4 sm:p-6">
         <header class="text-center mb-6">
             <h1 class="text-3xl font-bold text-gray-800">東京旅行プラン</h1>
-            <p class="text-gray-600 mt-1">当日用インタラクティブ作戦要綱</p>
+            <p class="text-gray-600 mt-1">【最終確定版】当日用作戦要綱</p>
         </header>
 
         <div id="trip-accordion" class="space-y-4">
-            <!-- Phase 1 -->
+            <!-- Day 1 -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <button class="accordion-button w-full flex justify-between items-center p-4 text-left font-bold text-lg open" data-target="phase1-content">
-                    <span>フェーズ1：拠点確保と周辺領域の制圧</span>
+                <button class="accordion-button w-full flex justify-between items-center p-4 text-left font-bold text-lg open" data-target="day1-content">
+                    <span>【1日目：7/24】拠点確保と周辺領域の制圧</span>
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
-                <div id="phase1-content" class="accordion-content p-4 space-y-3">
+                <div id="day1-content" class="accordion-content p-4 space-y-3">
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
                         <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
@@ -68,15 +74,13 @@
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
                         <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
-                            <p class="task-text font-semibold">【16:00】<a href="https://www.google.com/maps/search/?api=1&query=OMO3浅草" target="_blank" class="text-blue-700 hover:underline">OMO3浅草</a>にチェックイン</p>
-                            <p class="text-sm text-gray-600">基地設営</p>
+                            <p class="task-text font-semibold">【16:00】<a href="https://www.google.com/maps/search/?api=1&query=OMO3浅草" target="_blank" class="text-blue-700 hover:underline">OMO3浅草</a>にチェックイン、基地設営</p>
                         </div>
                     </div>
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
                         <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
-                            <p class="task-text font-semibold">【16:30〜】浅草寺・仲見世通りを偵察</p>
-                            <p class="text-sm text-gray-600"><a href="https://www.google.com/maps/search/?api=1&query=フラワーミッフィー+浅草" target="_blank" class="text-blue-700 hover:underline">フラワーミッフィー</a>を確保</p>
+                            <p class="task-text font-semibold">【16:30〜】浅草寺・仲見世通りを偵察、<a href="https://www.google.com/maps/search/?api=1&query=フラワーミッフィー+浅草" target="_blank" class="text-blue-700 hover:underline">フラワーミッフィー</a>を確保</p>
                         </div>
                     </div>
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
@@ -86,78 +90,83 @@
                             <p class="text-sm text-gray-600">すみだ水族館を調査、miffy styleを訪問</p>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <button class="accordion-button w-full flex justify-between items-center p-4 text-left font-bold text-lg" data-target="day2-content">
+                    <span>【2日目：7/25】絶対的制約任務の日</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="day2-content" class="accordion-content p-4 space-y-3 hidden">
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
                         <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
-                            <p class="task-text font-semibold">【夜】補給（ディナー）</p>
-                            <p class="text-sm text-gray-600">浅草または押上エリアにて</p>
+                            <p class="task-text font-semibold">【11:00-12:00】<a href="https://www.google.com/maps/search/?api=1&query=東京都台東区三筋1-6-2" target="_blank" class="text-blue-700 hover:underline">ink-stand by kakimori</a>（東エリア）</p>
+                            <p class="text-sm text-gray-600">予約時間厳守</p>
+                        </div>
+                    </div>
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【午後】<a href="https://www.google.com/maps/search/?api=1&query=ありさ＆あかメガネ" target="_blank" class="text-blue-700 hover:underline">ありさ＆あかメガネ</a>（西エリア）</p>
+                            <p class="text-sm text-gray-600">本日営業のみ。東から西へ長距離移動</p>
+                            <div class="sub-goal-container">
+                                <h4 class="text-sm font-bold text-gray-700">立ち寄り候補：</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=世界堂+新宿本店" target="_blank" class="sub-goal-link text-sm text-blue-700 hover:underline block">世界堂 新宿本店 (経由地の新宿にて)</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【夕方】<a href="https://www.google.com/maps/search/?api=1&query=トラベラーズファクトリー中目黒" target="_blank" class="text-blue-700 hover:underline">トラベラーズファクトリー</a>（西エリア）</p>
+                            <p class="text-sm text-gray-600">西エリア滞在中に攻略。閉店20:00</p>
+                             <div class="sub-goal-container">
+                                <h4 class="text-sm font-bold text-gray-700">立ち寄り候補：</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=代官山+蔦屋書店" target="_blank" class="sub-goal-link text-sm text-blue-700 hover:underline block">代官山 蔦屋書店 (近隣)</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=明治神宮" target="_blank" class="sub-goal-link text-sm text-blue-700 hover:underline block">明治神宮 (近隣)</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Phase 2 -->
+            <!-- Day 3 -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <button class="accordion-button w-full flex justify-between items-center p-4 text-left font-bold text-lg" data-target="phase2-content">
-                    <span>フェーズ2：最重要任務と東西横断</span>
+                <button class="accordion-button w-full flex justify-between items-center p-4 text-left font-bold text-lg" data-target="day3-content">
+                    <span>【3日目：7/26】残存目標の掃討と帰還</span>
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
-                <div id="phase2-content" class="accordion-content p-4 space-y-3 hidden">
-                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
-                        <div>
-                            <p class="task-text font-semibold">【11:00-12:00】<a href="https://www.google.com/maps/search/?api=1&query=東京都台東区三筋1-6-2" target="_blank" class="text-blue-700 hover:underline">ink-stand by kakimori</a></p>
-                            <p class="text-sm text-gray-600">最優先ミッションを遂行</p>
-                        </div>
-                    </div>
-                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
-                        <div>
-                            <p class="task-text font-semibold">【12:30-14:30】<a href="https://www.google.com/maps/search/?api=1&query=秋葉原" target="_blank" class="text-blue-700 hover:underline">秋葉原・神田エリア</a>へ転進</p>
-                            <p class="text-sm text-gray-600">ホビーショップ群を連続攻略</p>
-                        </div>
-                    </div>
-                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
-                        <div>
-                            <p class="task-text font-semibold">【15:00-16:30】<a href="https://www.google.com/maps/search/?api=1&query=銀座伊東屋" target="_blank" class="text-blue-700 hover:underline">銀座 伊東屋</a>を探訪</p>
-                        </div>
-                    </div>
-                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
-                        <div>
-                            <p class="task-text font-semibold">【17:15-20:00】<a href="https://www.google.com/maps/search/?api=1&query=トラベラーズファクトリー中目黒" target="_blank" class="text-blue-700 hover:underline">トラベラーズファクトリー</a>を確保</p>
-                            <p class="text-sm text-gray-600">閉店20:00</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Phase 3 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <button class="accordion-button w-full flex justify-between items-center p-4 text-left font-bold text-lg" data-target="phase3-content">
-                    <span>フェーズ3：最終目標の達成と撤収</span>
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div id="phase3-content" class="accordion-content p-4 space-y-3 hidden">
+                <div id="day3-content" class="accordion-content p-4 space-y-3 hidden">
                      <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
                         <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
                             <p class="task-text font-semibold">【午前】基地撤収＆装備移管</p>
-                            <p class="text-sm text-gray-600">チェックアウト後、荷物を新宿駅の兵站拠点へ</p>
+                            <p class="text-sm text-gray-600">チェックアウト後、荷物を東京駅の兵站拠点へ</p>
+                        </div>
+                    </div>
+                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
+                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <div>
+                            <p class="task-text font-semibold">【午前】<a href="https://www.google.com/maps/search/?api=1&query=秋葉原" target="_blank" class="text-blue-700 hover:underline">秋葉原・神田エリア</a>へ転進</p>
+                            <p class="text-sm text-gray-600">ホビーショップ群を攻略</p>
+                            <div class="sub-goal-container">
+                                <h4 class="text-sm font-bold text-gray-700">立ち寄り候補：</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=国立科学博物館" target="_blank" class="sub-goal-link text-sm text-blue-700 hover:underline block">国立科学博物館 (上野・近隣)</a>
+                            </div>
                         </div>
                     </div>
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
                         <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
-                            <p class="task-text font-semibold">【午前】<a href="https://www.google.com/maps/search/?api=1&query=東京大神宮" target="_blank" class="text-blue-700 hover:underline">東京大神宮</a>を参拝</p>
-                        </div>
-                    </div>
-                    <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
-                        <div>
-                            <p class="task-text font-semibold">【昼〜午後】<a href="https://www.google.com/maps/search/?api=1&query=豪徳寺" target="_blank" class="text-blue-700 hover:underline">豪徳寺</a>へ移動</p>
-                            <p class="text-sm text-gray-600">最終目標「<a href="https://www.google.com/maps/search/?api=1&query=ありさ＆あかメガネ" target="_blank" class="text-blue-700 hover:underline">ありさ＆あかメガネ</a>」を訪問</p>
+                            <p class="task-text font-semibold">【昼】<a href="https://www.google.com/maps/search/?api=1&query=銀座伊東屋" target="_blank" class="text-blue-700 hover:underline">銀座 伊東屋</a>を探訪</p>
+                             <div class="sub-goal-container">
+                                <h4 class="text-sm font-bold text-gray-700">立ち寄り候補：</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=ロフト+銀座" target="_blank" class="sub-goal-link text-sm text-blue-700 hover:underline block">ロフト 銀座店 (同エリア)</a>
+                                <a href="https://www.google.com/maps/search/?api=1&query=東京大神宮" target="_blank" class="sub-goal-link text-sm text-blue-700 hover:underline block">東京大神宮 (寄り道)</a>
+                            </div>
                         </div>
                     </div>
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
