@@ -24,7 +24,8 @@
             border-left-color: #4CAF50; /* Green 500 */
         }
         .task-card.checked .task-text,
-        .task-card.checked .sub-goal-link {
+        .task-card.checked .sub-goal-link,
+        .task-card.checked .sub-task-link {
             text-decoration: line-through;
             color: #757575; /* Grey 600 */
         }
@@ -77,19 +78,19 @@
                 </button>
                 <div id="day1-content" class="accordion-content p-4 space-y-3">
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <input type="checkbox" class="task-checkbox mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
                             <p class="task-text font-semibold">【15:28】東京駅に着弾</p>
                         </div>
                     </div>
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <input type="checkbox" class="task-checkbox mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
                             <p class="task-text font-semibold">【16:30〜】浅草寺・仲見世通りを偵察、<a href="https://www.google.com/maps/search/?api=1&query=フラワーミッフィー+浅草" target="_blank" class="text-blue-700 hover:underline">フラワーミッフィー</a>を確保</p>
                         </div>
                     </div>
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <input type="checkbox" class="task-checkbox mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
                             <p class="task-text font-semibold">【18:00〜】<a href="https://www.google.com/maps/search/?api=1&query=東京スカイツリータウン" target="_blank" class="text-blue-700 hover:underline">東京スカイツリータウン</a>へ進出</p>
                             <p class="text-sm text-gray-600">すみだ水族館を調査、miffy styleを訪問</p>
@@ -106,14 +107,14 @@
                 </button>
                 <div id="day2-content" class="accordion-content p-4 space-y-3 hidden">
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <input type="checkbox" class="task-checkbox mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
                             <p class="task-text font-semibold">【11:00-12:00】<a href="https://www.google.com/maps/search/?api=1&query=東京都台東区三筋1-6-2" target="_blank" class="text-blue-700 hover:underline">ink-stand by kakimori</a>（東エリア）</p>
                             <p class="text-sm text-gray-600">予約時間厳守</p>
                         </div>
                     </div>
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <input type="checkbox" class="task-checkbox mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
                             <p class="task-text font-semibold">【午後】<a href="https://www.google.com/maps/search/?api=1&query=ありさ＆あかメガネ" target="_blank" class="text-blue-700 hover:underline">ありさ＆あかメガネ</a>（西エリア）</p>
                             <p class="text-sm text-gray-600">本日営業のみ。東から西へ長距離移動</p>
@@ -124,7 +125,7 @@
                         </div>
                     </div>
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <input type="checkbox" class="task-checkbox mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
                             <p class="task-text font-semibold">【夕方】<a href="https://www.google.com/maps/search/?api=1&query=トラベラーズファクトリー中目黒" target="_blank" class="text-blue-700 hover:underline">トラベラーズファクトリー</a>（西エリア）</p>
                             <p class="text-sm text-gray-600">西エリア滞在中に攻略。閉店20:00</p>
@@ -146,25 +147,41 @@
                 </button>
                 <div id="day3-content" class="accordion-content p-4 space-y-3 hidden">
                      <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <input type="checkbox" class="task-checkbox mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
                             <p class="task-text font-semibold">【午前】基地撤収＆装備移管</p>
                             <p class="text-sm text-gray-600">チェックアウト後、荷物を東京駅の兵站拠点へ</p>
                         </div>
                     </div>
-                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
-                        <div>
-                            <p class="task-text font-semibold">【午前】<a href="https://www.google.com/maps/search/?api=1&query=秋葉原" target="_blank" class="text-blue-700 hover:underline">秋葉原・神田エリア</a>へ転進</p>
-                            <p class="text-sm text-gray-600">ホビーショップ群を攻略</p>
-                            <div class="sub-goal-container">
-                                <h4 class="text-sm font-bold text-gray-700">立ち寄り候補：</h4>
-                                <a href="https://www.google.com/maps/search/?api=1&query=国立科学博物館" target="_blank" class="sub-goal-link text-sm text-blue-700 hover:underline block">国立科学博物館 (上野・近隣)</a>
+                     <div class="task-card p-4 rounded-lg shadow-sm">
+                        <div class="flex items-start space-x-4">
+                            <input type="checkbox" id="akiba-main-task" class="task-checkbox mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                            <div>
+                                <p class="task-text font-semibold">【午前】<a href="https://www.google.com/maps/search/?api=1&query=秋葉原" target="_blank" class="text-blue-700 hover:underline">秋葉原・神田エリア</a>へ転進</p>
+                                <p class="text-sm text-gray-600">ホビーショップ群を攻略</p>
                             </div>
+                        </div>
+                        <div class="mt-4 pl-10 space-y-3 border-l-2 border-gray-300 ml-3">
+                            <div class="flex items-start space-x-3">
+                                <input type="checkbox" class="akiba-sub-task task-checkbox mt-1 h-5 w-5 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                                <a href="https://www.google.com/maps/search/?api=1&query=ウォーハンマーストア+秋葉原" target="_blank" class="sub-task-link text-sm text-blue-700 hover:underline">ウォーハンマーストア</a>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <input type="checkbox" class="akiba-sub-task task-checkbox mt-1 h-5 w-5 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                                <a href="https://www.google.com/maps/search/?api=1&query=ボークス+秋葉原ホビー天国2" target="_blank" class="sub-task-link text-sm text-blue-700 hover:underline">ボークス 秋葉原ホビー天国2</a>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <input type="checkbox" class="akiba-sub-task task-checkbox mt-1 h-5 w-5 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                                <a href="https://www.google.com/maps/search/?api=1&query=ジャイアントホビー+神田" target="_blank" class="sub-task-link text-sm text-blue-700 hover:underline">ジャイアントホビー</a>
+                            </div>
+                        </div>
+                        <div class="sub-goal-container">
+                            <h4 class="text-sm font-bold text-gray-700">立ち寄り候補：</h4>
+                            <a href="https://www.google.com/maps/search/?api=1&query=国立科学博物館" target="_blank" class="sub-goal-link text-sm text-blue-700 hover:underline block">国立科学博物館 (上野・近隣)</a>
                         </div>
                     </div>
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <input type="checkbox" class="task-checkbox mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
                             <p class="task-text font-semibold">【昼】<a href="https://www.google.com/maps/search/?api=1&query=銀座伊東屋" target="_blank" class="text-blue-700 hover:underline">銀座 伊東屋</a>を探訪</p>
                              <div class="sub-goal-container">
@@ -175,7 +192,7 @@
                         </div>
                     </div>
                     <div class="task-card p-4 rounded-lg shadow-sm flex items-start space-x-4">
-                        <input type="checkbox" class="mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
+                        <input type="checkbox" class="task-checkbox mt-1 h-6 w-6 rounded border-gray-400 text-blue-grey-600 focus:ring-blue-grey-500">
                         <div>
                             <p class="task-text font-semibold">【18:12】東京駅より帰還</p>
                             <p class="text-sm text-gray-600">作戦完了</p>
@@ -225,8 +242,8 @@
                 });
             }
 
-            const checkboxes = document.querySelectorAll('.task-card input[type="checkbox"]');
-            checkboxes.forEach(checkbox => {
+            const allCheckboxes = document.querySelectorAll('.task-checkbox');
+            allCheckboxes.forEach(checkbox => {
                 checkbox.addEventListener('change', (event) => {
                     const card = event.target.closest('.task-card');
                     if (card) {
@@ -234,6 +251,29 @@
                     }
                 });
             });
+
+            // Akihabara sub-task logic
+            const akibaMainTask = document.getElementById('akiba-main-task');
+            const akibaSubTasks = document.querySelectorAll('.akiba-sub-task');
+
+            if(akibaMainTask && akibaSubTasks.length > 0) {
+                akibaMainTask.addEventListener('change', () => {
+                    akibaSubTasks.forEach(subTask => {
+                        subTask.checked = akibaMainTask.checked;
+                        // Trigger change event to update styling
+                        subTask.dispatchEvent(new Event('change'));
+                    });
+                });
+
+                akibaSubTasks.forEach(subTask => {
+                    subTask.addEventListener('change', () => {
+                        const allChecked = Array.from(akibaSubTasks).every(task => task.checked);
+                        akibaMainTask.checked = allChecked;
+                         // Trigger change event to update styling
+                        akibaMainTask.dispatchEvent(new Event('change'));
+                    });
+                });
+            }
         });
     </script>
 
